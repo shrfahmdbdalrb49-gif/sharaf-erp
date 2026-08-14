@@ -1,0 +1,26 @@
+{
+  "name": "sharf_backend",
+  "version": "1.0.0",
+  "description": "Sharaf ERP — central backend (Node.js + Express + PostgreSQL)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node docker-entrypoint.js",
+    "dev": "nodemon server.js",
+    "seed": "node seed.js",
+    "setup-db": "psql \"$DATABASE_URL\" -f schema/schema.sql"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "pg": "^8.23.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
